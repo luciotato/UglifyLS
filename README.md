@@ -1,7 +1,7 @@
 Uglify2 parser translated to LiteScript 
 ==========
 
-TL;DR: *By compiling LiteScript to C, UglifyJS parser runs 2.4 times faster.*
+TL;DR: *By compiling LiteScript to C, UglifyJS parser runs 2.5 times faster.*
 
 ###Background
 I'm working on [LiteScript](https://github.com/luciotato/LiteScript), 
@@ -18,9 +18,7 @@ from:
 
 3) the previous LiteScript code compiled-to-c 
 
-##Test suites
-
-all parsers are feeded a .js file composed of the concatenation of: jquery + undescore + AngularJS .File size is 365 Kib
+##Test contenders
 
 ### Contender #1: Original Uglify2
 
@@ -35,26 +33,29 @@ most of the "translation" is trivial.
 ###Contender #3: LiteScript code, compile-to-c
 
 A further altered version of the previous LiteScript code, 
-to adhere to stricter rules allowing compilation to fast c
-standalone executable.
+to adhere to stricter rules allowing compilation 
+to a fast c standalone executable.
 
-##Results:
+##Tests Results
 
-parsing of: `jquery-1.11.1.js + Underscore.js 1.6.0 + AngularJS` 366 KiB
+Input: all parsers are feeded a .js file composed of: `jquery-1.11.1.js + Underscore.js 1.6.0 + AngularJS`. File size is 366 KiB
 
-code | time | difference
---|--
-Original Uglify2, parse.js code | 425 ms | base
---|--
-LS code, compile-to-js | 455 ms  | +30 ms, 7% slower
---|--
-LS code, compile-to-c - release | 180 ms | 2.4 times faster
+source code               | target/generated      | time   | relative to base
+------------------        | --------------------- | ------:| -----------------
+Original Uglify2 parse.js |                       | 430 ms | base
+LiteScript code           | compile-to-js         | 450 ms | +20 ms, 5% slower
+LiteScript code           | compile-to-c          | 150 ms | 2.5 times faster !!
+
+####Conclusion: 
+>UglifyJS parser "translated" to LiteScript and compiled-to-c, runs 2.5 times faster
+
+-------------------
 
 ## "Translating" to LiteScript
 
-a side-by-side example of original js-code and the equivalent "translated" LiteScript code
-
 Most parts of a "translation" from js code to LiteScript code are trivial.
+
+Here's side-by-side example of original js-code (left) and the equivalent "translated" LiteScript code (right)
 
 ![Screenshot](/screenshot/snapshot1.png?raw=true "left: original js, right: translated ls")
 
