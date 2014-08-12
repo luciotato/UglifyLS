@@ -1,17 +1,16 @@
 Uglify2 parser translated to LiteScript 
 ==========
 
-TL;DR; *By compiling LiteScript to C, UglifyJS parser can run 2.4 times faster.*
+TL;DR; *By compiling LiteScript to C, UglifyJS parser runs 2.4 times faster.*
 
 ###Background
-*I'm working on LiteScript(https://github.com/luciotato/LiteScript), 
-a compile-to-js **and compile-to-c** language, based in Javascript design (the good parts). 
+I'm working on [LiteScript](https://github.com/luciotato/LiteScript), 
+a compile-to-js, ***and compile-to-c*** language, based on Javascript design (the good parts). 
 
 ##Proof of concept
 
 This is a proof of concept, to measure performance increases
-from pure js hand-optimized code, 
-LiteScript compiled-to-js 
+from pure js hand-optimized code vs the same code "translated" to LiteScript and then compiled-to-js 
 and LiteScript compiled-to-c 
 
 ##Test suites
@@ -32,8 +31,8 @@ most of the "translation" is trivial.
 
 ###LS code, compile-to-c
 
-A further altered version of the previus LiteScript code, 
-to adhere to stricter rules allowing compilation to-c (and generation of faster code)
+A further altered version of the previous LiteScript code, 
+to adhere to stricter rules allowing compilation to c
 
 ##Results:
 
@@ -49,15 +48,15 @@ LS code, compile-to-c - release | 180 ms | 2.4 times faster
 
 ## "Translating" to LiteScript
 
-a side-by-side examplse of original js-code and the equivalen LiteScript code
+a side-by-side example of original js-code and the equivalent "translated" LiteScript code
 
-Most parts of a "translation" to from js code to LiteScript code are trivial.
+Most parts of a "translation" from js code to LiteScript code are trivial.
 
 ![Screenshot](/screenshot/snapshot1.png?raw=true "left: original js, right: translated ls")
 
 ## Contributors needed
 
-Can anyone estimate power & time spent worldwide running Uglify? 
+Can anyone estimate time spent worldwide running Uglify? 
 
 Making Uglify run faster will save a lot of people a lot of time.
 If anybody is interested to take this proyect further, I'll transfer this repo.
@@ -65,12 +64,12 @@ If anybody is interested to take this proyect further, I'll transfer this repo.
 I'm interested in advancing LiteScript, so I'll give full support.
 
 To produce a fast compiled-to-c version of Uglify seems the perfect candidate 
-project at this point to advance LiteScript because the actually limited 
+project at this point to advance LiteScript because the -actually limited-
 support of LiteC-core is just what Uglify requires.
 
 LiteC-core is the C hand-coded core support of LiteScript compiled-to-c programs,
 and it mimics basic JavaScript core support: Object, Class, Strings, Map, etc.
-and also mimics basic node.js support modules as "fs" & "path".
+and also basic node.js support modules as "fs" & "path".
 
 ## To reproduce this results
 
