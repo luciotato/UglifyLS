@@ -1,13 +1,14 @@
 
     import Utils, AST
 
-    shim import PMREX, LiteCore //, Iterable
+    shim import PMREX, LiteCore
 
 
-(C) 2014 Lucio Tato
-Litescript translation of:
+/***********************************************************************
+  (C) 2014 Lucio Tato
+  Litescript translation of:
 
-/*
+
   A JavaScript tokenizer / parser / beautifier / compressor.
   https://github.com/mishoo/UglifyJS2
 
@@ -205,7 +206,6 @@ Litescript translation of:
             this.col = col;
             this.pos = pos;
             //this.stack = new Error().stack;
-    
 
         method toString
             return "#{this.message}  (line: #{this.line}, col: #{this.col}, pos: #{this.pos})" //\n\n" + this.stack;
