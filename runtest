@@ -1,0 +1,26 @@
+#! /bin/bash
+
+TESTNUM=$1
+
+TEST1="node $2 test-original.js"
+TEST2="node $2 lib/generated/js/Test2"
+TEST3="./uglifyc ./jquery-underscore-angular.js"
+
+if [ "$1" = "1" ]; then 
+    $TEST1
+
+elif [ "$1" = "2" ]; then 
+    $TEST2
+
+elif [ "$1" = "3" ]; then 
+    $TEST3
+
+elif [ "$1" = "4" ]; then 
+    ll ~/LiteScript/devel/litec/UglifyC/dist/Release/GNU-Linux-x86/uglifyc
+    ~/LiteScript/devel/litec/UglifyC/dist/Release/GNU-Linux-x86/uglifyc ./jquery-underscore-angular.js
+
+else
+    $TEST1
+    $TEST2
+    $TEST3
+fi

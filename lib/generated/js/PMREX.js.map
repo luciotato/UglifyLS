@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "PMREX.js",
+  "sourceRoot": "",
+  "sources": [
+    "PMREX.lite.md"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;AAUA;;;;AAGA;;;;AAGA;;;;AAEA;;AACA;;;;;;AAGA;;AACA;;AACA;;;;;;AAEA;;AACA;;;;;AAGA;AACA;;;;;;;;;;;;;;AASA;;;;AAGA;;;;AAGA;;;;AAEA;;;;;;AAGA;;AACA;;;;;;AAEA;;;;;AAGA;AACA;;;;;AACA;;;AAEA;;;;AAGA;;AACA;;;;AAEA;;AACA;;AACA;;AACA;;AACA;;;;;AAEA;;;AACA;;;;AAEA;AACA;;;;;;;;AAKA;;;;AAEA;;;AAEA;;;AAEA;;;AAEA;;;;AAEA;;;;AAEA;;AACA;;;;;AAEA;;;;;;;AAGA;;;;;AAEA;AACA;;;;;;;;;;AAKA;;AACA;AACA"
+}

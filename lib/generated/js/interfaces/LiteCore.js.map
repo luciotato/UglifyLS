@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "LiteCore.js",
+  "sourceRoot": "",
+  "sources": [
+    "LiteCore.lite.md"
+  ],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;AAeA;;AACA;AACA;;;;;AAGA;;AACA;AACA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAgCA;;;;AACA;AACA;;;;;AACA;;;;AACA;AACA;;;;;AACA;;;;AACA;;AACA;AACA;;;;;AACA;;;;AACA;AACA;;;;;;;AAGA;;;;AACA;AACA;;;;;AACA;;;;AACA;;;;;;AAEA;;;;;AACA;AACA;;;;;AACA;;;;;;;;AAEA;;AACA;;;;;AACA;;;;;;;;;;;;;;;;;AAYA;;;;AACA;;;;;;AAEA;;;;;AACA;AACA;;;;;;;;;;;AAMA;;;;AACA;AACA;;;;;AACA;;;;AACA;;AACA;AACA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAmDA;;AACA;AACA;;;;;;;;;;AAQA;;AACA;AACA;;;AACA;;AACA;AACA"
+}
