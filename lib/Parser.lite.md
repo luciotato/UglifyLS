@@ -50,7 +50,6 @@
 
     ***********************************************************************/
 
-```javascript
 
     var KEYWORDS_s = 'break case catch const continue debugger default delete do else finally for function if in instanceof new return switch throw try typeof var void while with';
     var KEYWORDS_ATOM_s = 'false null true'
@@ -246,7 +245,6 @@
             //chunk: string
             //moreChars: boolean
 
-```
 
 tokenize returns a function next_token(forceRegexp:booleean) 
 returning the next token in the stream
