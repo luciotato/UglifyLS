@@ -64,7 +64,7 @@ Here's a side-by-side example of original js-code (left) and the equivalent "tra
 Can anyone estimate the time spent worldwide running Uglify? 
 
 Making Uglify run faster will save a lot of people a lot of time.
-If you're interested to take this proyect further, I'll transfer this repo.
+If you're interested to take this project further, I'll transfer this repo.
 
 I'm interested in advancing LiteScript, so I'll give full support.
 
