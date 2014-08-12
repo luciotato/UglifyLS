@@ -4,21 +4,21 @@
     shim import PMREX, LiteCore
 
 
-/***********************************************************************
-  (C) 2014 Lucio Tato
-  Litescript translation of:
+    /***********************************************************************
+    (C) 2014 Lucio Tato
+    Litescript translation of:
 
 
-  A JavaScript tokenizer / parser / beautifier / compressor.
-  https://github.com/mishoo/UglifyJS2
+    A JavaScript tokenizer / parser / beautifier / compressor.
+    https://github.com/mishoo/UglifyJS2
 
-  -------------------------------- (C) ---------------------------------
+    -------------------------------- (C) ---------------------------------
 
                            Author: Mihai Bazon
                          <mihai.bazon@gmail.com>
                        http://mihai.bazon.net/blog
 
-  Distributed under the BSD license:
+    Distributed under the BSD license:
 
     Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>
     Parser based on parse-js (http://marijn.haverbeke.nl/parse-js/).
@@ -49,7 +49,7 @@
     THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
     SUCH DAMAGE.
 
- ***********************************************************************/
+    ***********************************************************************/
 
     var KEYWORDS_s = 'break case catch const continue debugger default delete do else finally for function if in instanceof new return switch throw try typeof var void while with';
     var KEYWORDS_ATOM_s = 'false null true'
