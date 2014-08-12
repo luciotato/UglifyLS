@@ -1,7 +1,7 @@
 Uglify2 parser translated to LiteScript 
 ==========
 
-TL;DR; *By compiling LiteScript to C, UglifyJS parser runs 2.4 times faster.*
+TL;DR: *By compiling LiteScript to C, UglifyJS parser runs 2.4 times faster.*
 
 ###Background
 I'm working on [LiteScript](https://github.com/luciotato/LiteScript), 
@@ -10,29 +10,33 @@ a compile-to-js, ***and compile-to-c*** language, based on Javascript design (th
 ##Proof of concept
 
 This is a proof of concept, to measure performance increases
-from pure js hand-optimized code vs the same code "translated" to LiteScript and then compiled-to-js 
-and LiteScript compiled-to-c 
+from:
+
+1) pure js hand-optimized code 
+
+2) the same code "translated" to LiteScript and compiled-to-js 
+
+3) the previous LiteScript code compiled-to-c 
 
 ##Test suites
 
-all parsers are feeded a .js file composed of the concatenation of: jquery + undescore + AngularJS
+all parsers are feeded a .js file composed of the concatenation of: jquery + undescore + AngularJS .File size is 365 Kib
 
-file size is 365 Kib
-
-###Original Uglify2
+### Contender #1: Original Uglify2
 
 The actual Uglify2.JS parser code, from: https://github.com/mishoo/UglifyJS2
 
-###LS code, compile-to-js
+###Contender #2: LiteScript code, compile-to-js
 
 A "translation" from the original Uglify2.JS code to LiteScript. 
 Since LiteScript is heavily based in javascript
 most of the "translation" is trivial.
 
-###LS code, compile-to-c
+###Contender #3: LiteScript code, compile-to-c
 
 A further altered version of the previous LiteScript code, 
-to adhere to stricter rules allowing compilation to c
+to adhere to stricter rules allowing compilation to fast c
+standalone executable.
 
 ##Results:
 
@@ -69,7 +73,7 @@ support of LiteC-core is just what Uglify requires.
 
 LiteC-core is the C hand-coded core support of LiteScript compiled-to-c programs,
 and it mimics basic JavaScript core support: Object, Class, Strings, Map, etc.
-and also basic node.js support modules as "fs" & "path".
+and also a few functions from basic node.js support modules as "fs" & "path".
 
 ## To reproduce this results
 
