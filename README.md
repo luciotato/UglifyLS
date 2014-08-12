@@ -20,15 +20,15 @@ from:
 
 ##Test contenders
 
-### Contender #1: Original Uglify2
+### Contender #1: Original Uglify2 parser.js
 
 The actual Uglify2.JS parser code, from: https://github.com/mishoo/UglifyJS2
 
 ###Contender #2: LiteScript code, compile-to-js
 
-A "translation" from the original Uglify2.JS code to LiteScript. 
+A "translation" from the original Uglify2.JS "parser.js" to LiteScript. 
 Since LiteScript is heavily based in javascript
-most of the "translation" is trivial.
+most of the translation is trivial.
 
 ###Contender #3: LiteScript code, compile-to-c
 
@@ -40,11 +40,11 @@ to a fast c standalone executable.
 
 Input: all parsers are feeded a .js file composed of: `jquery-1.11.1.js + Underscore.js 1.6.0 + AngularJS`. File size is 366 KiB
 
-source code               | target/generated      | time   | relative to base
-------------------        | --------------------- | ------:| -----------------
-Original Uglify2 parse.js |                       | 430 ms | base
-LiteScript code           | compile-to-js         | 450 ms | +20 ms, 5% slower
-LiteScript code           | compile-to-c          | 150 ms | 2.5 times faster !!
+source code               | target/generated   | parse time | relative to base
+------------------        | ------------------ | ------:| -----------------
+Original Uglify2 parse.js |                    | 430 ms | base
+LiteScript code           | compile-to-js      | 450 ms | +20 ms, 5% slower
+LiteScript code           | compile-to-c       | 150 ms | 2.5 times faster !!
 
 ####Conclusion: 
 >UglifyJS parser "translated" to LiteScript and compiled-to-c, runs 2.5 times faster
