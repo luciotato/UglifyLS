@@ -55,16 +55,16 @@ LiteScript code           | compile-to-c       | 150 ms | 2.5 times faster !!
 
 Most parts of a "translation" from js code to LiteScript code are trivial.
 
-Here's side-by-side example of original js-code (left) and the equivalent "translated" LiteScript code (right)
+Here's a side-by-side example of original js-code (left) and the equivalent "translated" LiteScript code (right)
 
 ![Screenshot](/screenshot/snapshot1.png?raw=true "left: original js, right: translated ls")
 
 ## Contributors needed
 
-Can anyone estimate time spent worldwide running Uglify? 
+Can anyone estimate the time spent worldwide running Uglify? 
 
 Making Uglify run faster will save a lot of people a lot of time.
-If anybody is interested to take this proyect further, I'll transfer this repo.
+If you're interested to take this proyect further, I'll transfer this repo.
 
 I'm interested in advancing LiteScript, so I'll give full support.
 
