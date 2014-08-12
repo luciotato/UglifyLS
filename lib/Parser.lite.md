@@ -3,7 +3,6 @@
 
     shim import PMREX, LiteCore
 
-
     /***********************************************************************
     (C) 2014 Lucio Tato
     Litescript translation of:
@@ -50,6 +49,7 @@
     SUCH DAMAGE.
 
     ***********************************************************************/
+
 
     var KEYWORDS_s = 'break case catch const continue debugger default delete do else finally for function if in instanceof new return switch throw try typeof var void while with';
     var KEYWORDS_ATOM_s = 'false null true'
