@@ -7,17 +7,17 @@
 Lucio Tato - 2014
 Litescript translation of:
 
-/*
-  A JavaScript tokenizer / parser / beautifier / compressor.
-  https://github.com/mishoo/UglifyJS2
+    /*
+    A JavaScript tokenizer / parser / beautifier / compressor.
+    https://github.com/mishoo/UglifyJS2
 
-  -------------------------------- (C) ---------------------------------
+    -------------------------------- (C) ---------------------------------
 
                            Author: Mihai Bazon
                          <mihai.bazon@gmail.com>
                        http://mihai.bazon.net/blog
 
-  Distributed under the BSD license:
+    Distributed under the BSD license:
 
     Copyright 2012 (c) Mihai Bazon <mihai.bazon@gmail.com>
     Parser based on parse-js (http://marijn.haverbeke.nl/parse-js/).
@@ -48,7 +48,7 @@ Litescript translation of:
     THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
     SUCH DAMAGE.
 
- ***********************************************************************/
+    ***********************************************************************/
 
     var KEYWORDS_s = 'break case catch const continue debugger default delete do else finally for function if in instanceof new return switch throw try typeof var void while with';
     var KEYWORDS_ATOM_s = 'false null true'
@@ -127,10 +127,7 @@ Litescript translation of:
     var FOUR_ZEROES = "0000";
 
 
-    /* -----[ Tokenizer ]----- 
-    */
-
-atom|num|string|regexp|name
+## -----[ Tokenizer ]----- 
 
     namespace TYPE
         properties
@@ -225,7 +222,7 @@ atom|num|string|regexp|name
             //this.stack = new Error().stack;
     
 
-        method toString
+#####   methodtoString
             return "#{this.message}  (line: #{this.line}, col: #{this.col}, pos: #{this.pos})" //\n\n" + this.stack;
 
 
@@ -241,7 +238,7 @@ atom|num|string|regexp|name
     var EX_EOF = {};
 
 
-    public namespace TKZ 
+### public namespace TKZ 
         properties 
             text      :string
             filename  :string
@@ -265,10 +262,10 @@ atom|num|string|regexp|name
             moreChars: boolean
 
 
+#####   method tokenize($TEXT:string, filename, html5_comments) returns function
+
 tokenize returns a function next_token(forceRegexp:booleean) 
 returning the next token in the stream
-
-        method tokenize($TEXT:string, filename, html5_comments) returns function
 
             TKZ.text = $TEXT.replaceAll("\r\n", "\n").replaceAll("\uFEFF", '')
             
@@ -287,7 +284,7 @@ move to first char in the stream
             return TKZ.next_token // function next_token(forceRegexp:booleean) 
 
 
-        method next(signal_eof, in_string) 
+#####   method next(signal_eof, in_string) 
 
             if no TKZ.moreChars 
                 if signal_eof 
@@ -312,29 +309,29 @@ move to first char in the stream
             
             return ch
         
-        method peek() 
+#####   method peek() 
             return TKZ.iterPos.value
 
-        method forward(i) 
+#####   methodforward(i) 
             while i-- > 0 
                 TKZ.next()
         
-        method looking_at(str:string) 
+#####   methodlooking_at(str:string) 
             return TKZ.text.byteSubstr(TKZ.iterPos.index, str.length) is str
 
-        method findByteIndex(what, signal_eof) 
+#####   methodfindByteIndex(what, signal_eof) 
             var pos = TKZ.text.byteIndexOf(what, TKZ.iterPos.index)
             if (signal_eof and pos is -1), throw EX_EOF
             return pos
         
 
-        method start_token() 
+#####   methodstart_token() 
             TKZ.tokline = TKZ.line;
             TKZ.tokcol = TKZ.col;
             TKZ.tokpos = TKZ.iterPos.key-1; //"key" holds -codepoint- index of current position
 
         
-        method token(type, value, is_comment) 
+#####   methodtoken(type, value, is_comment) 
 
 TKZ.regex_allowed is a semiglobal flag, to mark how to treat the *next* token if it is a /.
 if as a regexpLiteral or division oper
@@ -376,11 +373,12 @@ if as a regexpLiteral or division oper
             return ret
         
 
-        method skip_whitespace() 
+#####   methodskip_whitespace() 
             while TKZ.peek() into var ch isnt null and WHITESPACE_CHARS.has(ch)
                 TKZ.next
         
-        /*method read_while(pred) 
+        /*
+        method read_while(pred) 
             var ret = "", ch, i = 0
             while (peek() into ch and pred(ch, i++))
                 ret &= next();
@@ -388,11 +386,11 @@ if as a regexpLiteral or division oper
         };
         */
 
-        method parse_error(err) 
+#####   methodparse_error(err) 
             js_error(err, TKZ.filename, TKZ.tokline, TKZ.tokcol, TKZ.tokpos);
         
 
-        method read_num(prefix) returns number
+#####   methodread_num(prefix) returns number
 
             var has_e = false, after_e = false, has_x = false, has_dot = prefix  is  ".";
             
@@ -437,7 +435,7 @@ if as a regexpLiteral or division oper
                 TKZ.parse_error("Invalid syntax: " & num)
             
             
-        method read_escaped_char(in_string:boolean) 
+#####   methodread_escaped_char(in_string:boolean) 
             var ch:string = TKZ.next(true, in_string);
             case ch.charCodeAt(0)
               when 110 : return "\n"
@@ -453,7 +451,7 @@ if as a regexpLiteral or division oper
               else
                  return ch;
             
-        method hex_bytes(n) 
+#####   methodhex_bytes(n) 
 
             var num = 0
 
@@ -469,7 +467,8 @@ if as a regexpLiteral or division oper
         
 
         //var read_string = with_eof_error("Unterminated string constant", method(){
-        method read_string
+
+#####   methodread_string
 
             var quote = TKZ.next(), ret = ""
 
@@ -521,7 +520,7 @@ if as a regexpLiteral or division oper
             return TKZ.token(TYPE.string, ret)
         
 
-        method skip_line_comment(type) 
+#####   methodskip_line_comment(type) 
 
             //need to save TKZ.regex_allowed flag because TKZ.token() resets it
             var save_regex_allowed = TKZ.regex_allowed
@@ -544,7 +543,7 @@ if as a regexpLiteral or division oper
             return TKZ.next_token();
         
 
-        method skip_multiline_comment //= with_eof_error("Unterminated multiline comment", method(){
+#####   methodskip_multiline_comment //= with_eof_error("Unterminated multiline comment", method(){
 
             //need to save TKZ.regex_allowed flag because TKZ.token() resets it
             var save_regex_allowed = TKZ.regex_allowed
@@ -577,7 +576,7 @@ if as a regexpLiteral or division oper
 
 read a indentifier 
 
-        method read_name() 
+#####   methodread_name() 
 
             var 
                 backslash = false, ch:string
@@ -621,7 +620,7 @@ read a indentifier
 
 
         //var read_regexp = with_eof_error("Unterminated regular expression", method(regexp){
-        method read_regexp
+#####   methodread_regexp
 
             var prev_backslash = false, ch, in_class = false, regexp="";
 
@@ -657,7 +656,7 @@ read a indentifier
             return TKZ.token(TYPE.regexp,regexp) // {regexp:regexp, mods:mods}) 
             
 
-        method read_operator(prefix) 
+#####   methodread_operator(prefix) 
 
             var operator= prefix or TKZ.next()
 
@@ -675,7 +674,7 @@ Keep reading until it is not an operator. return last one which is
             return TKZ.token(TYPE.operator, operator)
         
 
-        method handle_slash() 
+#####   methodhandle_slash() 
 
             TKZ.next();
             
@@ -692,7 +691,7 @@ Keep reading until it is not an operator. return last one which is
             return TKZ.regex_allowed ? TKZ.read_regexp("") : TKZ.read_operator("/");
         
 
-        method handle_dot() 
+#####   methodhandle_dot() 
             
             TKZ.next();
 
@@ -701,7 +700,7 @@ Keep reading until it is not an operator. return last one which is
                 : TKZ.token(TYPE.punc, ".")
         
 
-        method read_word() 
+#####   methodread_word() 
             var word = TKZ.read_name()
             if TKZ.prev_was_dot, return TKZ.token(TYPE.name, word)
 
@@ -723,7 +722,7 @@ Keep reading until it is not an operator. return last one which is
         };
         */
 
-        method next_token(force_regexp) 
+#####   methodnext_token(force_regexp) 
 
             if force_regexp 
                 return TKZ.read_regexp(force_regexp);
@@ -771,7 +770,7 @@ Keep reading until it is not an operator. return last one which is
         
     end namespace TKZ
 
-    /* -----[ Parser (constants) ]----- */
+## -----[ Parser (constants) ]----- 
 
     var UNARY_PREFIX = Utils.makePredicate("UNARY_PREFIX",[
         "typeof",
@@ -837,8 +836,7 @@ Keep reading until it is not an operator. return last one which is
 
     //var ATOMIC_START_TOKEN = "|atom|num|string|regexp|name|";
 
-    /* -----[ Parser ]----- 
-    */
+##  -----[ Parser ]----- 
 
     class PRSOptions
         properties
@@ -849,7 +847,7 @@ Keep reading until it is not an operator. return last one which is
             html5_comments = true
 
 
-    public namespace PRS 
+### public namespace PRS 
 
         properties
             input  : Function //next_token
@@ -862,7 +860,7 @@ Keep reading until it is not an operator. return last one which is
             labels        = []
             options: PRSOptions     
 
-        method parse($TEXT, options) 
+#####   methodparse($TEXT, options) 
 
             PRS.options = new PRSOptions
 
@@ -897,14 +895,14 @@ Keep reading until it is not an operator. return last one which is
             return toplevel;
 
 
-        method isToken(type, value) 
+#####   methodisToken(type, value) 
             return is_token(PRS.token, type, value)
 
-        method peek() returns string 
+#####   methodpeek() returns string 
             //return PRS.peeked or (PRS.input.call(undefined) into PRS.peeked)
              return PRS.peeked or (TKZ.next_token() into PRS.peeked)
 
-        method next() 
+#####   methodnext() 
             PRS.prev = PRS.token
             if PRS.peeked
                 PRS.token = PRS.peeked
@@ -919,11 +917,11 @@ Keep reading until it is not an operator. return last one which is
             return PRS.token
         
 
-        method getPrev() 
+#####   methodgetPrev() 
             return PRS.prev
         
 
-        method croak(msg, line, col, pos) 
+#####   methodcroak(msg, line, col, pos) 
             //var ctx = PRS.input.context();
             js_error(msg,
                      TKZ.filename,
@@ -932,28 +930,28 @@ Keep reading until it is not an operator. return last one which is
                      pos isnt null ? pos : TKZ.tokpos);
         
 
-        method token_error(token, msg) 
+#####   methodtoken_error(token, msg) 
             PRS.croak(msg, token.line, token.col);
         
 
-        method unexpected(token) 
+#####   methodunexpected(token) 
             if token is undefined, token = PRS.token;
             PRS.token_error(token, "Unexpected token: type:#{token.type} (#{token.value})");
         
 
-        method expect_token(type, val) 
+#####   methodexpect_token(type, val) 
             if PRS.isToken(type, val), return PRS.next()
             PRS.token_error(PRS.token, "Unexpected token type:#{PRS.token.type} «#{PRS.token.value}», expected #{type} «#{val}»")
 
-        method expect(punc) 
+#####   methodexpect(punc) 
             return PRS.expect_token(TYPE.punc, punc);
 
-        method can_insert_semicolon() 
+#####   methodcan_insert_semicolon() 
             return not PRS.options.strict 
                 and (PRS.token.nlb  or PRS.isToken(TYPE.eof) or PRS.isToken(TYPE.punc, "}") )
         
 
-        method semicolon() 
+#####   methodsemicolon() 
 
             if PRS.isToken(TYPE.punc, ";") 
                 PRS.next()
@@ -962,7 +960,7 @@ Keep reading until it is not an operator. return last one which is
                 PRS.unexpected();
         
 
-        method parenthesised() 
+#####   methodparenthesised() 
             
             PRS.expect("(");
             var exp = PRS.expression(true);
@@ -970,7 +968,7 @@ Keep reading until it is not an operator. return last one which is
             return exp;
         
 
-        method handle_regexp() 
+#####   methodhandle_regexp() 
             if PRS.isToken(TYPE.operator, "/")  or  PRS.isToken(TYPE.operator, "/=")
                 PRS.peeked = null;
                 var v:string = PRS.token.value
@@ -978,7 +976,7 @@ Keep reading until it is not an operator. return last one which is
                 PRS.token = TKZ.next_token(v.substr(1))
 
 
-        method embed_tokens(parser_fn:function) 
+#####   methodembed_tokens(parser_fn:function) 
 
 calls parser_fn, returns AST_node
             
@@ -994,7 +992,7 @@ calls parser_fn, returns AST_node
             return expr
         
 
-        method statement
+#####   methodstatement
             //return PRS.embed_tokens(PRS.statement_parser_fn)
             
             var start = PRS.token;
@@ -1009,7 +1007,7 @@ calls parser_fn, returns AST_node
             return expr
 
 
-        method statement_parser_fn
+#####   methodstatement_parser_fn
 
             var tmp;
             PRS.handle_regexp();
@@ -1183,7 +1181,7 @@ calls parser_fn, returns AST_node
         end statement_parser
 
 
-        method labeled_statement() 
+#####   methodlabeled_statement() 
             var label = PRS.as_symbol(AST.Label);
 
             var found
@@ -1219,13 +1217,13 @@ calls parser_fn, returns AST_node
             return new AST.LabeledStatement({ body: stat, label: label });
         
 
-        method simple_statement(tmp) 
+#####   methodsimple_statement(tmp) 
             tmp = PRS.expression(true) 
             PRS.semicolon()
             return new AST.SimpleStatement({ body: tmp });
         
 
-        method break_cont(type:Function) 
+#####   methodbreak_cont(type:Function) 
             
             var label = null, found
             
@@ -1254,7 +1252,7 @@ calls parser_fn, returns AST_node
             return stat;
         
 
-        method for_() 
+#####   methodfor_() 
             PRS.expect("(");
             var init:AST.Node = null;
             
@@ -1279,7 +1277,7 @@ calls parser_fn, returns AST_node
             return PRS.regular_for(init);
         
 
-        method regular_for(init) 
+#####   methodregular_for(init) 
             PRS.expect(";");
             var test = PRS.isToken(TYPE.punc, ";") ? null : PRS.expression(true);
             PRS.expect(";");
@@ -1298,7 +1296,7 @@ calls parser_fn, returns AST_node
             });
         
 
-        method for_in(init:AST.Var) 
+#####   methodfor_in(init:AST.Var) 
             var lhs = init instanceof AST.Var ? init.definitions[0].name : null;
             var obj = PRS.expression(true);
             PRS.expect(")");
@@ -1315,7 +1313,7 @@ calls parser_fn, returns AST_node
             });
         
 
-        method function_(ctor) 
+#####   methodfunction_(ctor) 
             var in_statement = ctor is AST.Defun;
             var name = PRS.isToken(TYPE.name) ? PRS.as_symbol(in_statement ? AST.SymbolDefun : AST.SymbolLambda) : null;
             if (in_statement and not name)
@@ -1360,7 +1358,7 @@ body
             });
 
 
-        method if_() 
+#####   methodif_() 
             var cond = PRS.parenthesised(), body = PRS.statement(), belse = null;
             if PRS.isToken(TYPE.keyword, "else")
                 PRS.next();
@@ -1373,7 +1371,7 @@ body
             });
         
 
-        method block_() 
+#####   methodblock_() 
 
             PRS.expect("{");
             var a = [];
@@ -1386,7 +1384,7 @@ body
             return a
         
 
-        method switch_body_() 
+#####   methodswitch_body_() 
 
             PRS.expect("{");
             var a = [], cur:array = null, branch:AST.Token = null, tmp;
@@ -1432,7 +1430,7 @@ body
             return a;
         
 
-        method try_() 
+#####   methodtry_() 
 
             var 
                 body = PRS.block_() 
@@ -1473,7 +1471,7 @@ body
         
 
 
-        method vardefs(no_in, in_const) 
+#####   methodvardefs(no_in, in_const) 
             var a = [];
             do
                 var start = PRS.token;
@@ -1500,7 +1498,7 @@ body
             return a;
         
 
-        method var_ (no_in)
+#####   methodvar_ (no_in)
             var v = new AST.Var({
                 start       : PRS.getPrev(),
                 definitions : PRS.vardefs(no_in, false),
@@ -1509,7 +1507,7 @@ body
             return v
         
 
-        method const_
+#####   methodconst_
             var c = new AST.Const({
                 start       : PRS.getPrev(),
                 definitions : PRS.vardefs(false, true),
@@ -1517,7 +1515,7 @@ body
             c.endpos = PRS.getPrev()
             return c        
 
-        method new_ 
+#####   methodnew_ 
             var start = PRS.token;
             PRS.expect_token(TYPE.operator, "new");
             var newexp = PRS.expr_atom(false), args;
@@ -1535,7 +1533,7 @@ body
             }), true);
         
 
-        method as_atom_node() 
+#####   methodas_atom_node() 
             var tok = PRS.token, ret;
             
             case tok.type
@@ -1569,7 +1567,7 @@ body
             return ret;
         
 
-        method expr_atom(allow_calls) 
+#####   methodexpr_atom(allow_calls) 
             if PRS.isToken(TYPE.operator, "new")
                 return PRS.new_();
             
@@ -1608,7 +1606,7 @@ body
         
 
 
-        method expr_list(closing, allow_trailing_comma, allow_empty) 
+#####   methodexpr_list(closing, allow_trailing_comma, allow_empty) 
             var first = true, a = [];
 
             do while not PRS.isToken(TYPE.punc, closing)
@@ -1632,7 +1630,7 @@ body
             return a;
         
 
-        method array_
+#####   methodarray_
             //return PRS.embed_tokens(PRS.array_parser)
             var start = PRS.token;
 
@@ -1646,14 +1644,14 @@ body
             return expr
 
 
-        method array_parser 
+#####   methodarray_parser 
             PRS.expect("[");
             return new AST.ArrayLiteral({
                 elements: PRS.expr_list("]", not PRS.options.strict, true)
             });
         
 
-        method object_ 
+#####   methodobject_ 
             //return PRS.embed_tokens(PRS.object_parser)
             var start = PRS.token;
 
@@ -1666,7 +1664,7 @@ body
 
             return expr
 
-        method object_parser
+#####   methodobject_parser
             PRS.expect("{");
             var first = true, a = [];
 
@@ -1723,7 +1721,7 @@ body
             return new AST.ObjectLiteral({ props: a })
         
 
-        method as_property_name() 
+#####   methodas_property_name() 
             var tmp = PRS.token;
             PRS.next();
             case tmp.type
@@ -1741,7 +1739,7 @@ body
             
         
 
-        method as_name() 
+#####   methodas_name() 
             var tmp = PRS.token;
             PRS.next();
             case tmp.type
@@ -1750,7 +1748,7 @@ body
               else
                 PRS.unexpected()
 
-        method _make_symbol(typeClass) 
+#####   method_make_symbol(typeClass) 
             var name = PRS.token.value;
             typeClass = name  is  "this" ? AST.This : typeClass;
             return new typeClass({
@@ -1760,7 +1758,7 @@ body
             });
         
 
-        method as_symbol(type, noerror) 
+#####   methodas_symbol(type, noerror) 
             if not PRS.isToken(TYPE.name)
                 if not noerror, PRS.croak("Name expected");
                 return null
@@ -1770,7 +1768,7 @@ body
             return sym;
         
 
-        method subscripts(expr:AST.Node, allow_calls) 
+#####   methodsubscripts(expr:AST.Node, allow_calls) 
             var start = expr.start;
             if (PRS.isToken(TYPE.punc, ".")) 
                 PRS.next();
@@ -1807,7 +1805,7 @@ body
             return expr
         
 
-        method maybe_unary(allow_calls) 
+#####   methodmaybe_unary(allow_calls) 
             var start = PRS.token;
             if PRS.isToken(TYPE.operator) and Utils.isPredicate(UNARY_PREFIX,start.value) 
                 PRS.next();
@@ -1831,13 +1829,13 @@ body
             return val;
         
 
-        method make_unary(ctor, op, expr) 
+#####   methodmake_unary(ctor, op, expr) 
             if ((op  is  "++"  or  op  is  "--") and not PRS.is_assignable(expr))
                 PRS.croak("Invalid use of #{op} operator");
             return new ctor({ operator: op, expression: expr });
         
 
-        method expr_op(left:AST.Node, min_prec, no_in) 
+#####   methodexpr_op(left:AST.Node, min_prec, no_in) 
 
             var op = PRS.isToken(TYPE.operator) ? PRS.token.value : null;
             if (op  is  "in" and no_in), op = null;
@@ -1859,11 +1857,11 @@ body
             return left;
         
 
-        method expr_ops(no_in) 
+#####   methodexpr_ops(no_in) 
             return PRS.expr_op(PRS.maybe_unary(true), 0, no_in);
         
 
-        method maybe_conditional(no_in) 
+#####   methodmaybe_conditional(no_in) 
             var start = PRS.token;
             var expr = PRS.expr_ops(no_in);
             if PRS.isToken(TYPE.operator, "?")
@@ -1882,13 +1880,13 @@ body
             return expr;
         
 
-        method is_assignable(expr) 
+#####   methodis_assignable(expr) 
             if no PRS.options.strict, return true;
             if expr instanceof AST.This, return false;
             return (expr instanceof AST.PropAccess  or  expr instanceof AST.Symbol);
         
 
-        method maybe_assign(no_in) 
+#####   methodmaybe_assign(no_in) 
             var start = PRS.token;
             var left = PRS.maybe_conditional(no_in), val = PRS.token.value;
             if PRS.isToken(TYPE.operator) and Utils.isPredicate(ASSIGNMENT,val)
@@ -1908,7 +1906,7 @@ body
             return left;
         
 
-        method expression(commas, no_in) returns AST.Seq
+#####   methodexpression(commas, no_in) returns AST.Seq
             var start = PRS.token;
             var expr = PRS.maybe_assign(no_in);
             if commas and PRS.isToken(TYPE.punc, ",")
