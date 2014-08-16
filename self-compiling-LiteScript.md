@@ -153,7 +153,7 @@ Now that we have the C-code, we use gcc (Netbeans IDE) to compile to a native-ex
 
 GCC took 15s to compile ***(c)output3(-to-js)*** into a *native executable*
 
-we call this native-exe *litec* (***Lite***Script ***C***ompiler)
+we call this native-exe *litec*, [Lite]Script [C]ompiler
 
 ## Phase 5 - Using the native exe to compile
 
@@ -185,5 +185,5 @@ if ***(js)output1-B*** == ***(js)output1***, then the v0.8(native-exe) compiler 
 Now here's the important performance comparision, the js-version of the v0.8 compiler, took 
 11.5 seconds to generate ***(js)output1-B***, and the native-exe took 1.6 seconds to do the same.
 
-Here we have a 7x performance difference. ***The native-exe runs 7 times faster than the js-version.*** of the same source LitesScript code.
+Here we have a 7x performance difference ***The native-exe runs 7 times faster than the js-version.*** of the same source LitesScript code.
 
