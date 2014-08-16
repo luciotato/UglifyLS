@@ -1,7 +1,7 @@
 Uglify2 parser translated to LiteScript 
 ==========
 
-TL;DR: *By "trasnlating" to LiteScript and then compile to C, 
+TL;DR: *By "translating" to LiteScript and then compiling to C, 
 UglifyJS parser runs 2.5 times faster.*
 
 ###Background
@@ -13,7 +13,7 @@ a compile-to-js, ***and compile-to-c*** language, based on Javascript design (th
 This is a proof of concept, to measure performance increases
 from:
 
-1) pure js hand-optimized code 
+1) original pure js hand-optimized code 
 
 2) the same code "translated" to LiteScript and compiled-to-js 
 
@@ -25,13 +25,13 @@ from:
 
 The actual Uglify2.JS parser code, from: https://github.com/mishoo/UglifyJS2
 
-###Contender #2: LiteScript code, compile-to-js
+###Contender #2: LiteScript code, compiled-to-js
 
 A "translation" from the original Uglify2.JS "parser.js" to LiteScript. 
 Since LiteScript is heavily based in javascript
 most of the translation is trivial.
 
-###Contender #3: LiteScript code, compile-to-c
+###Contender #3: LiteScript code, compiled-to-c
 
 A further altered version of the previous LiteScript code, 
 to adhere to stricter rules allowing compilation 
@@ -43,9 +43,9 @@ Input: all parsers are feeded a .js file composed of: `jquery-1.11.1.js + Unders
 
 source code               | target/generated   | parse time | relative to base
 ------------------        | ------------------ | ------:| -----------------
-Original Uglify2 parse.js |                    | 430 ms | base
-LiteScript code           | compile-to-js      | 450 ms | +20 ms, 5% slower
-LiteScript code           | compile-to-c       | 170 ms | 2.5 times faster !!
+Original Uglify2 parse.js | js                 | 430 ms | base
+LiteScript code           | compiled-to-js     | 450 ms | +20 ms, 5% slower
+LiteScript code           | compiled-to-c      | 170 ms | 2.5 times faster !!
 
 ####Conclusion: 
 >UglifyJS parser "translated" to LiteScript and compiled-to-c, runs 2.5 times faster
@@ -84,7 +84,12 @@ get this repo, execute:
     . runtest
 
 To alter, compile and hack on this, you'll need to get also: 
-- LiteScript(https://github.com/luciotato/LiteScript)
+- LiteScript (https://github.com/luciotato/LiteScript)
 - node
 - SublimeText (to use LiteScript syntax coloring)
 - NetBeans with C/C++ to compile generated-c
+
+-------
+
+read next: [Self-Compiling LiteScript, 7x performance gain] (self-compiling-LiteScript.md)
+
