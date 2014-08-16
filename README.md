@@ -39,7 +39,7 @@ to a fast c standalone executable.
 
 ##Tests Results
 
-Input: all parsers are feeded a .js file composed of: `jquery-1.11.1.js + Underscore.js 1.6.0 + AngularJS`. File size is 366 KiB
+Input: all parsers are fed a .js file composed of: `jquery-1.11.1.js + Underscore.js 1.6.0 + AngularJS`. File size is 366 KiB
 
 source code               | target/generated   | parse time | relative to base
 ------------------        | ------------------ | ------:| -----------------
