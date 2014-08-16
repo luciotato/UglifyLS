@@ -13,9 +13,9 @@ we start with LiteScript compiler v0.8 sources. Let's call this *input0*
 ## Phase 1
 We use *the previous, executable version of the compiler* to compile this source.
 
-We feed *input0* (v0.8 sources) to v.07 compiler
+We feed *input0* (v0.8 sources) to v0.7 compiler
 
-Since v.07 compiler is js-code, this compilation phase runs under node.js
+Since v0.7 compiler is js-code, this compilation phase runs under node.js
 
         ----------------------
         using v0.7-to-js to generate (js code) v0.8 lite-to-js compiler
