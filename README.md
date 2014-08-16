@@ -56,7 +56,8 @@ LiteScript code           | compiled-to-c      | 170 ms | 2.5 times faster !!
 
 Most parts of a "translation" from js code to LiteScript code are trivial.
 
-Here's a side-by-side example of original js-code (left) and the equivalent "translated" LiteScript code (right)
+Here's a side-by-side example of the original UglifyJS parser.js code (left) 
+and the equivalent "translated" LiteScript code (right)
 
 ![Screenshot](/screenshot/snapshot1.png?raw=true "left: original js, right: translated ls")
 
