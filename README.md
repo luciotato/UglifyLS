@@ -6,7 +6,8 @@ UglifyJS parser runs 2.5 times faster.*
 
 ###Background
 I'm working on [LiteScript](https://github.com/luciotato/LiteScript), 
-a compile-to-js, ***and compile-to-c*** language, based on Javascript design (the good parts). 
+a literate, compile-to-js, ***and compile-to-c*** language, 
+based on Javascript design (the good parts). 
 
 ##Proof of concept
 
