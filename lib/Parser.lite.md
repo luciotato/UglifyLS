@@ -126,8 +126,7 @@
 
     var FOUR_ZEROES = "0000";
 
-    /* -----[ Tokenizer ]----- 
-    */
+    /* -----[ Tokenizer ]----- */
 
     // regexps adapted from http://xregexp.com/plugins/#unicode
     namespace UNICODE 

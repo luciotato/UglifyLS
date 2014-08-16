@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="90">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="core" displayName="core" projectFiles="true">
+      <itemPath>core/ImmutArray.c</itemPath>
+      <itemPath>core/LiteC-core.c</itemPath>
+      <itemPath>core/LiteC-core.h</itemPath>
+      <itemPath>core/PMREX-native.c</itemPath>
+      <itemPath>core/PMREX-native.h</itemPath>
+      <itemPath>core/any.c</itemPath>
+      <itemPath>core/any.h</itemPath>
+      <itemPath>core/exceptions.c</itemPath>
+      <itemPath>core/exceptions.h</itemPath>
+      <itemPath>core/fs-native.c</itemPath>
+      <itemPath>core/fs-native.h</itemPath>
+      <itemPath>core/keytree.c</itemPath>
+      <itemPath>core/simplemalloc.c</itemPath>
+      <itemPath>core/simplemalloc.h</itemPath>
+      <itemPath>core/utf8strings.c</itemPath>
+      <itemPath>core/utf8strings.h</itemPath>
+      <itemPath>core/util.c</itemPath>
+      <itemPath>core/util.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="generated-c" displayName="generated-c" projectFiles="true">
+      <logicalFolder name="interfaces" displayName="interfaces" projectFiles="true">
+        <logicalFolder name="C_standalone"
+                       displayName="C_standalone"
+                       projectFiles="true">
+          <itemPath>generated-c/interfaces/C_standalone/fs.c</itemPath>
+          <itemPath>generated-c/interfaces/C_standalone/fs.h</itemPath>
+          <itemPath>generated-c/interfaces/C_standalone/path.c</itemPath>
+          <itemPath>generated-c/interfaces/C_standalone/path.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="lib" displayName="lib" projectFiles="true">
+        <itemPath>generated-c/lib/AST.c</itemPath>
+        <itemPath>generated-c/lib/AST.h</itemPath>
+        <itemPath>generated-c/lib/ParserWithIterable.c</itemPath>
+        <itemPath>generated-c/lib/ParserWithIterable.h</itemPath>
+        <itemPath>generated-c/lib/TestOut.c</itemPath>
+        <itemPath>generated-c/lib/TestOut.h</itemPath>
+        <itemPath>generated-c/lib/Utils.c</itemPath>
+        <itemPath>generated-c/lib/Utils.h</itemPath>
+        <itemPath>generated-c/lib/mkPath.c</itemPath>
+        <itemPath>generated-c/lib/mkPath.h</itemPath>
+      </logicalFolder>
+      <itemPath>generated-c/Test3.c</itemPath>
+      <itemPath>generated-c/Test3.h</itemPath>
+      <itemPath>generated-c/_dispatcher.c</itemPath>
+      <itemPath>generated-c/_dispatcher.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f1"
+                     displayName="Core Support Tests"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>../core/tests/Strings.c</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>include/gc</Elem>
+    <Elem>generated-c</Elem>
+    <Elem>core</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+          <incDir>
+            <pElem>core</pElem>
+          </incDir>
+          <commandLine>-fmax-errors=10</commandLine>
+          <preprocessorList>
+            <Elem>FLATTEN_ALL</Elem>
+          </preprocessorList>
+        </cTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>gc</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../core/tests/Strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/ImmutArray.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/any.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/any.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/exceptions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/fs-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/fs-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/keytree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/utf8strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/utf8strings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="HeaderFiles">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="generated-c/Test3.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/Test3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <standard>3</standard>
+          <incDir>
+            <pElem>core</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>FLATTEN_ALL</Elem>
+            <Elem>NDEBUG</Elem>
+          </preprocessorList>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibFileItem>include/libgc.so</linkerLibFileItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../core/tests/Strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/ImmutArray.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/any.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/any.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/exceptions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/fs-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/fs-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/keytree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/utf8strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/utf8strings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="generated-c/Test3.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/Test3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="valgrind" type="1">
+      <toolsSet>
+        <compilerSet>GNU|GNU</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <standard>3</standard>
+          <incDir>
+            <pElem>../core</pElem>
+            <pElem>generated-c/interfaces</pElem>
+            <pElem>generated-c/interfaces/C_standalone</pElem>
+          </incDir>
+          <commandLine>-fmax-errors=10</commandLine>
+          <preprocessorList>
+            <Elem>FLATTEN_ALL</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>NO_GC</Elem>
+          </preprocessorList>
+        </cTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>gc</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="../core/tests/Strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/ImmutArray.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/LiteC-core.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/PMREX-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/any.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/any.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/exceptions.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/exceptions.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/fs-native.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/fs-native.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/keytree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/simplemalloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/utf8strings.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/utf8strings.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="core/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="core/util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="HeaderFiles">
+        <cTool>
+          <incDir>
+            <pElem>/usr/include</pElem>
+          </incDir>
+        </cTool>
+      </folder>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
+      <item path="generated-c/Test3.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/Test3.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/_dispatcher.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/fs.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/interfaces/C_standalone/path.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/AST.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/ParserWithIterable.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/TestOut.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="generated-c/lib/mkPath.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

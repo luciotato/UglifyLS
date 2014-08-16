@@ -1,7 +1,8 @@
 Uglify2 parser translated to LiteScript 
 ==========
 
-TL;DR: *By compiling LiteScript to C, UglifyJS parser runs 2.5 times faster.*
+TL;DR: *By "trasnlating" to LiteScript and then compile to C, 
+UglifyJS parser runs 2.5 times faster.*
 
 ###Background
 I'm working on [LiteScript](https://github.com/luciotato/LiteScript), 
@@ -44,7 +45,7 @@ source code               | target/generated   | parse time | relative to base
 ------------------        | ------------------ | ------:| -----------------
 Original Uglify2 parse.js |                    | 430 ms | base
 LiteScript code           | compile-to-js      | 450 ms | +20 ms, 5% slower
-LiteScript code           | compile-to-c       | 150 ms | 2.5 times faster !!
+LiteScript code           | compile-to-c       | 170 ms | 2.5 times faster !!
 
 ####Conclusion: 
 >UglifyJS parser "translated" to LiteScript and compiled-to-c, runs 2.5 times faster

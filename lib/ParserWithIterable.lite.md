@@ -1841,7 +1841,7 @@ body
             if (op  is  "in" and no_in), op = null;
             var prec = op isnt null ? PRECEDENCE.tryGetProperty(op) : null;
 
-            if (prec isnt null and prec > min_prec) 
+            if (prec and prec > min_prec) 
                 
                 PRS.next();
                 

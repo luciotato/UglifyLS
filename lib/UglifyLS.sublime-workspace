@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"Uglify",
+				"Uglify2"
+			],
+			[
+				"cha",
+				"character"
+			],
+			[
+				"make",
+				"makePredicate"
+			],
+			[
 				"isPre",
 				"isPred"
 			],
@@ -502,18 +514,6 @@
 			[
 				"insta",
 				"instanceof"
-			],
-			[
-				"proto",
-				"prototype"
-			],
-			[
-				"varRef",
-				"varRefSuper"
-			],
-			[
-				"super",
-				"superclass"
 			]
 		]
 	},
@@ -523,7 +523,23 @@
 			"file": "Test3.lite.md",
 			"settings":
 			{
-				"buffer_size": 929,
+				"buffer_size": 1058,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ltato/UglifyLS/README.md",
+			"settings":
+			{
+				"buffer_size": 3084,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TestOut.lite.md",
+			"settings":
+			{
+				"buffer_size": 3537,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,15 +547,7 @@
 			"file": "/home/ltato/UglifyLS/test-original.js",
 			"settings":
 			{
-				"buffer_size": 1119,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/ltato/UglifyLS/jquery-1.11.1.js",
-			"settings":
-			{
-				"buffer_size": 374674,
+				"buffer_size": 938,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +555,7 @@
 			"file": "ParserWithIterable.lite.md",
 			"settings":
 			{
-				"buffer_size": 66354,
+				"buffer_size": 67131,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +571,7 @@
 			"file": "build-lite.sh",
 			"settings":
 			{
-				"buffer_size": 339,
+				"buffer_size": 390,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,23 +579,7 @@
 			"file": "Test2.lite.md",
 			"settings":
 			{
-				"buffer_size": 862,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Parser.lite.md",
-			"settings":
-			{
-				"buffer_size": 63111,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/ltato/UglifyLS/test-generated-js.js",
-			"settings":
-			{
-				"buffer_size": 26,
+				"buffer_size": 1011,
 				"line_ending": "Unix"
 			}
 		},
@@ -595,7 +587,7 @@
 			"file": "/home/ltato/UglifyLS/runtest",
 			"settings":
 			{
-				"buffer_size": 306,
+				"buffer_size": 510,
 				"line_ending": "Unix"
 			}
 		},
@@ -608,34 +600,10 @@
 			}
 		},
 		{
-			"file": "TestOut.lite.md",
+			"file": "Parser.lite.md",
 			"settings":
 			{
-				"buffer_size": 3005,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/ltato/UglifyLS/README.md",
-			"settings":
-			{
-				"buffer_size": 520,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/ltato/LiteScript/devel/source/v0.8/Compiler.lite.md",
-			"settings":
-			{
-				"buffer_size": 6521,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/ltato/LiteScript/devel/source/v0.8/NOTES.md",
-			"settings":
-			{
-				"buffer_size": 47111,
+				"buffer_size": 63187,
 				"line_ending": "Unix"
 			}
 		}
@@ -688,15 +656,21 @@
 	},
 	"file_history":
 	[
+		"/home/ltato/UglifyLS/README.md",
+		"/home/ltato/UglifyLS/lib/parse.js",
+		"/home/ltato/UglifyLS/jquery-1.11.1.js",
+		"/home/ltato/LiteScript/devel/generated-js/v0.8/lite-to-c/ASTBase.js",
+		"/home/ltato/LiteScript/devel/source/v0.8/NOTES.md",
+		"/home/ltato/LiteScript/devel/source/v0.8/Compiler.lite.md",
+		"/home/ltato/UglifyLS/lib/TestOut.lite.md",
+		"/home/ltato/UglifyLS/test-generated-js.js",
 		"/home/ltato/LiteScript/devel/source/v0.8/Grammar.lite.md",
 		"/home/ltato/UglifyLS/lib/generated/js/AST.js",
 		"/home/ltato/UglifyLS/lib/mozilla-ast.js",
 		"/home/ltato/LiteScript/devel/source/v0.8/interfaces/GlobalScopeC.interface.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/interfaces/shims.lite.md",
 		"/home/ltato/UglifyLS/lib/generated/js/TestOut.js",
-		"/home/ltato/UglifyLS/lib/parse.js",
 		"/home/ltato/UglifyLS/lib/ParserWithIterable.lite.md",
-		"/home/ltato/UglifyLS/jquery-1.11.1.js",
 		"/home/ltato/UglifyLS/lib/AST.lite.md",
 		"/home/ltato/UglifyLS/lib/Parser.lite.md",
 		"/home/ltato/UglifyLS/lib/UtilsWithMap.lite.md",
@@ -707,8 +681,6 @@
 		"/home/ltato/UglifyLS/lib/generated/js/interfaces/LiteCore.js",
 		"/home/ltato/UglifyLS/lib/build-lite.sh",
 		"/home/ltato/LiteScript/devel/generated-js/v0.8/lite-to-c/Producer_c.js",
-		"/home/ltato/UglifyLS/README.md",
-		"/home/ltato/UglifyLS/lib/TestOut.lite.md",
 		"/home/ltato/.config/sublime-text-2/Packages/LiteScript/Lite.tmLanguage",
 		"/home/ltato/UglifyLS/lib/generated/js/Test.js",
 		"/home/ltato/.config/sublime-text-2/Packages/LiteScript/Night.tmTheme",
@@ -741,13 +713,11 @@
 		"/home/ltato/LiteScript/devel/source/v0.8/Parser.lite.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/lib/shims.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/1.lite.md",
-		"/home/ltato/LiteScript/devel/source/v0.8/NOTES.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/NOTES iterators.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/NOTES javascript or operator.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/lib/Environment.lite.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/interfaces/C_standalone/path.lite.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/build-lite.sh",
-		"/home/ltato/LiteScript/devel/source/v0.8/Compiler.lite.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/NOTES literal objects.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/NOTES named params analysis.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/interfaces/GlobalScopeJS.interface.md",
@@ -813,9 +783,7 @@
 		"/home/ltato/LiteScript/devel/source/v0.7/Environment.lite.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/ENV_C_global_import/fs.interface.md",
 		"/home/ltato/LiteScript/devel/source/v0.8/interfaces/fs.interface.md",
-		"/home/ltato/LiteScript/devel/source/v0.8/ENV_C_global_import/NOTES.md",
-		"/home/ltato/LiteScript/devel/source/v0.8/ENV_C_global_import/README.md",
-		"/home/ltato/LiteScript/devel/source/v0.8/package.json"
+		"/home/ltato/LiteScript/devel/source/v0.8/ENV_C_global_import/NOTES.md"
 	],
 	"find":
 	{
@@ -826,6 +794,8 @@
 		"height": 110.0,
 		"where_history":
 		[
+			"/home/ltato/UglifyLS",
+			"/home/ltato/UglifyLs",
 			"/home/ltato/LiteScript/devel/source/v0.8",
 			"/home/ltato/LiteScript/devel/source/v0.8/lib",
 			"/home/ltato/UglifyLS/lib",
@@ -951,8 +921,6 @@
 			"/home/ltato/LiteScript/liteCompiler-v0.0",
 			"/home/ltato/LiteScript/source-v0.0",
 			"/home/ltato/LiteScript/source-v0.3",
-			"/home/ltato/LiteScript/source-v0.4",
-			"/home/ltato/LiteScript/util/node_modules",
 			"/home/ltato/LiteScript/source-v0.4"
 		]
 	},
@@ -961,6 +929,50 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"proyec",
+			"#####   method",
+			"        method ",
+			"\"\\n",
+			"\"",
+			"\"key",
+			"\"string",
+			"\"punc",
+			"PRS\\.expect_token\\(\"(.*?)\"",
+			"\"(punc|string)\"",
+			"TKZ\\.token\\(\"(.*?)\"",
+			"TKZ.token(\"string\"",
+			"TKZ\\.token\\(\"(.*?)\"",
+			"TKZ",
+			"TZK",
+			"TZK\\.token",
+			"token",
+			"TZK\\.token",
+			"TZK\\.token\\(\"(.*?)\"",
+			"type",
+			"type =",
+			"\"punfc",
+			"if no",
+			"TKZ.iterPos.next",
+			"d peed",
+			"no ch",
+			"\"eof\"",
+			"isToken",
+			"PRS\\.isToken\\(\"(.*?)\"",
+			"PRS\\.isToken\\((\".*?\")",
+			"isToken",
+			"is_token",
+			"ATOMIC_START_TOKEN",
+			".type",
+			"length",
+			"peek",
+			"Peek",
+			"iterableNext",
+			"iterPos",
+			"WHITESPACE_CHARS",
+			"WHITESPACE_CHARS\n",
+			"character",
+			"characted",
+			"WHITESPACE_CHARS",
 			"not found in the operator precedence list",
 			"d repeat",
 			"bfinally",
@@ -1044,51 +1056,7 @@
 			"string.",
 			"string",
 			"constant",
-			"variable",
-			"this",
-			"comment",
-			"variable",
-			"=",
-			"storage",
-			"storage.this.lite",
-			"keyword.operat",
-			"var",
-			"keyword",
-			"keywor",
-			"consta",
-			"comment",
-			"keyword",
-			"keyword.",
-			"keyword.boolean",
-			"keyword.class",
-			"keyword.other.class",
-			"keyword.class",
-			"keyword.compiler.lite",
-			"entity.other.inherited-class",
-			"entity.name.class",
-			"entit",
-			"entity.name.class",
-			"meta.",
-			".name",
-			"name",
-			"meta.name",
-			"meta",
-			"meta.name",
-			"entity",
-			"entit",
-			"entiti",
-			"#80F080",
-			"return",
-			"variable",
-			"storage",
-			"entity",
-			"class",
-			"support.class",
-			"#808080",
-			"support",
-			"entity",
-			"function",
-			"declare val"
+			"variable"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1096,6 +1064,11 @@
 		"regex": false,
 		"replace_history":
 		[
+			"#####   method ",
+			"#####   method",
+			"PRS\\.expect_token\\(TYPE.$1",
+			"TKZ\\.token\\(TYPE.$1",
+			"PRS\\.isToken\\(TYPE.$1",
 			"#808080",
 			"Iterable.Position",
 			"nameIndexVar",
@@ -1218,12 +1191,7 @@
 			"newEB01Grq",
 			"GB01",
 			"EB01",
-			"gb01DetGrq",
-			"entBase01Grq",
-			"eb01Grq",
-			"eb01TitlesGrq",
-			"ent_base_01",
-			"entbase01"
+			"gb01DetGrq"
 		],
 		"reverse": false,
 		"show_context": false,
@@ -1234,7 +1202,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1242,15 +1210,15 @@
 					"file": "Test3.lite.md",
 					"settings":
 					{
-						"buffer_size": 929,
+						"buffer_size": 1058,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								553,
-								553
+								890,
+								890
 							]
 						],
 						"settings":
@@ -1260,32 +1228,30 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 196.0,
+						"translation.y": 641.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/home/ltato/UglifyLS/test-original.js",
+					"file": "/home/ltato/UglifyLS/README.md",
 					"settings":
 					{
-						"buffer_size": 1119,
+						"buffer_size": 3084,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								213,
-								213
+								546,
+								546
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/LiteScript/Lite.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1295,45 +1261,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/home/ltato/UglifyLS/jquery-1.11.1.js",
+					"file": "TestOut.lite.md",
 					"settings":
 					{
-						"buffer_size": 374674,
+						"buffer_size": 3537,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								374674,
-								374674
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 292215.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "ParserWithIterable.lite.md",
-					"settings":
-					{
-						"buffer_size": 66354,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								50771,
-								50771
+								535,
+								535
 							]
 						],
 						"settings":
@@ -1343,13 +1282,94 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 30834.0,
+						"translation.y": 98.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/ltato/UglifyLS/test-original.js",
+					"settings":
+					{
+						"buffer_size": 938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								522,
+								522
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "ParserWithIterable.lite.md",
+					"settings":
+					{
+						"buffer_size": 67131,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										4467,
+										4467
+									],
+									[
+										4557,
+										4557
+									],
+									[
+										32904,
+										32931
+									],
+									[
+										56526,
+										56526
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								66637,
+								66637
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LiteScript/Lite.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 41758.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "AST.lite.md",
 					"settings":
 					{
@@ -1377,19 +1397,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "build-lite.sh",
 					"settings":
 					{
-						"buffer_size": 339,
+						"buffer_size": 390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								65,
-								65
+								384,
+								384
 							]
 						],
 						"settings":
@@ -1398,52 +1418,24 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Test2.lite.md",
-					"settings":
-					{
-						"buffer_size": 862,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								265,
-								265
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LiteScript/Lite.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "Parser.lite.md",
+					"file": "Test2.lite.md",
 					"settings":
 					{
-						"buffer_size": 63111,
+						"buffer_size": 1011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15073,
-								15073
+								486,
+								486
 							]
 						],
 						"settings":
@@ -1453,51 +1445,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5426.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/home/ltato/UglifyLS/test-generated-js.js",
-					"settings":
-					{
-						"buffer_size": 26,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 8,
 					"file": "/home/ltato/UglifyLS/runtest",
 					"settings":
 					{
-						"buffer_size": 306,
+						"buffer_size": 510,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								468,
+								468
 							]
 						],
 						"settings":
@@ -1505,13 +1471,13 @@
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 66.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 9,
 					"file": "Utils.lite.md",
 					"settings":
 					{
@@ -1522,8 +1488,8 @@
 						"selection":
 						[
 							[
-								7956,
-								7956
+								7958,
+								7958
 							]
 						],
 						"settings":
@@ -1533,25 +1499,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5387.0,
+						"translation.y": 4848.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "TestOut.lite.md",
+					"buffer": 10,
+					"file": "Parser.lite.md",
 					"settings":
 					{
-						"buffer_size": 3005,
+						"buffer_size": 63187,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								841,
-								841
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1561,89 +1527,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 528.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/home/ltato/UglifyLS/README.md",
-					"settings":
-					{
-						"buffer_size": 520,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								520,
-								520
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LiteScript/Lite.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/home/ltato/LiteScript/devel/source/v0.8/Compiler.lite.md",
-					"settings":
-					{
-						"buffer_size": 6521,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3800,
-								3800
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LiteScript/Lite.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2604.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "/home/ltato/LiteScript/devel/source/v0.8/NOTES.md",
-					"settings":
-					{
-						"buffer_size": 47111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1353,
-								1353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LiteScript/Lite.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 891.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1684,11 +1568,11 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 274.0
+		"height": 201.0
 	},
 	"output.find_results":
 	{
-		"height": 187.0
+		"height": 152.0
 	},
 	"replace":
 	{
