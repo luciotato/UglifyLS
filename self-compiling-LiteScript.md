@@ -185,5 +185,6 @@ if ***(js)output1-B*** == ***(js)output1***, then the v0.8(native-exe) compiler 
 Now here's the important performance comparision, the js-version of the v0.8 compiler, took 
 11.5 seconds to generate ***(js)output1-B***, and the native-exe took 1.6 seconds to do the same.
 
-Here we have a 7x performance difference ***The native-exe runs 7 times faster than the js-version.*** of the same source LitesScript code.
+Here we have a 7x performance difference ***The native-exe runs 7 times faster than the js-version*** 
+of the same source LitesScript code.
 
