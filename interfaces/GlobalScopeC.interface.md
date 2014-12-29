@@ -2,7 +2,7 @@
 
 The compiler pre-creates some core objects, to allow declaration of property and return types
 
-global pre-created vars are:
+global pre-created values are:
   undefined, null, true, false, NaN
 
 global pre-created Classes are:
